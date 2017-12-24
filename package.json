@@ -1,0 +1,30 @@
+{
+  "name": "liri-node-app",
+  "version": "1.0.0",
+  "description": "Use text commands to call for information just like Siri!",
+  "main": "liri.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kjmbaldwin/liri-node-app.git"
+  },
+  "keywords": [
+    "liri",
+    "twitter",
+    "omdb",
+    "spotify"
+  ],
+  "author": "Kyle Baldwin",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/kjmbaldwin/liri-node-app/issues"
+  },
+  "homepage": "https://github.com/kjmbaldwin/liri-node-app#readme",
+  "dependencies": {
+    "node-spotify-api": "^1.0.7",
+    "request": "^2.83.0",
+    "twitter": "^1.7.1"
+  }
+}
