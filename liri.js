@@ -3,7 +3,7 @@ var keys = require("./keys.js");
 
 var request = require('request');
 var Spotify = require('node-spotify-api');
-var twitter = require('twitter');
+var Twitter = require('twitter');
 var fs = require('fs');
 
 var spotify = new Spotify(keys.spotify);
@@ -19,7 +19,7 @@ switch(liriAction){
     break;
 
   case 'my-tweets':
-    twitter();
+    myTweets();
     break;
 
   case 'spotify-this-song':
@@ -127,6 +127,22 @@ console.log("Artist Name: " + artistName + '\nSong Name: ' + songName + "\nPrevi
 
 };
 
-function twitter(){
+function myTweets(){
+
+  twitter.get('statuses/user_timeline', function(error, tweets, response) {
+  if(error) throw error;
+  
+  console.log('Tweets from @killobyt:\n')
+
+  for (var i = 0; i < 20; i++) {
+    console.log('--------------------------');
+    console.log(tweets[i].text + '\n');
+  }
+
+  // console.log(tweets[0])
+  // console.log(tweets[0].text)
+
+
+});
 
 };
